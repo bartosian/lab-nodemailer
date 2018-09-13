@@ -7,12 +7,13 @@ const userSchema = new Schema({
   status: {
     type: String,
     enum: ["Pending Confirmation", "Active"],
+    default: "Pending Confirmation"
+  },
     confirmationCode: String,
     email: {
-      type: String,
-      unique: true
+        type: String,
+        unique: true
     }
-  },
 }, {
   timestamps: {
     createdAt: 'created_at',
